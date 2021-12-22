@@ -1,0 +1,2 @@
+[default]
+ELASTICSEARCH_URL = "localhost:9200"
