@@ -43,7 +43,7 @@ def export_popular_movies(
         movies.append(movies_page)
 
     with open(output_path, mode="w") as output_file:
-        json.dump(movies, output_file, indent=4, ensure_ascii=False)
+        json.dump(movies, output_file, indent=4, sort_keys=True, ensure_ascii=False)
 
 
 if __name__ == "__main__":
