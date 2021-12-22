@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from typing import Optional
 
-import typer
 import httpx
+import typer
 
 
 def export_popular_movies(

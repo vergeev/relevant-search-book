@@ -7,7 +7,6 @@ import httpx
 import typer
 from dynaconf import settings
 
-
 readable_file_args = {
     "exists": True,
     "file_okay": True,
