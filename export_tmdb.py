@@ -40,7 +40,7 @@ def export_popular_movies(
             "https://api.themoviedb.org/3/movie/popular", params=params
         )
         movies_page = response.json()["results"]
-        movies.append(movies_page)
+        movies += movies_page
 
     with open(output_path, mode="w") as output_file:
         json.dump(movies, output_file, indent=4, sort_keys=True, ensure_ascii=False)
