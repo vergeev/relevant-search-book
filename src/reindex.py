@@ -1,11 +1,12 @@
 import json
 from pathlib import Path
-from typing import Any
 from urllib.parse import urljoin
 
 import httpx
 import typer
 from dynaconf import settings
+
+from src.utils import read_json
 
 readable_file_args = {
     "exists": True,
@@ -41,11 +42,6 @@ def reindex(
         content=bulk_request_content,
         headers={"content-type": "application/json"},
     )
-
-
-def read_json(json_path: Path) -> Any:
-    with open(json_path) as json_file:
-        return json.load(json_file)
 
 
 def construct_index_settings(analysis_settings: dict, mappings_settings: dict) -> dict:
