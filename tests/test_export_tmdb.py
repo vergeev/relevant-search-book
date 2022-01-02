@@ -46,5 +46,5 @@ def test_export_tmdb(tmdb_mock: respx.MockRouter, tmp_path: pathlib.Path):
         ["--output-path", output_path],
         env={"TMDB_API_KEY": "TMDB_API_KEY"},
     )
-    assert result.exit_code == 0
+    assert result.exit_code == 0, result.stdout
     assert read_json(output_path)
