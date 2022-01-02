@@ -1,4 +1,4 @@
-name: Static
+name: Test
 
 on:
   push:
